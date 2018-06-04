@@ -28,7 +28,6 @@ import android.view.MotionEvent;
 import org.eazegraph.lib.R;
 import org.eazegraph.lib.models.BarModel;
 import org.eazegraph.lib.models.BaseModel;
-import org.eazegraph.lib.models.StackedBarModel;
 import org.eazegraph.lib.utils.Utils;
 
 import java.util.ArrayList;
@@ -65,12 +64,12 @@ public class BarChart extends BaseBarChart {
      * @param context The Context the view is running in, through which it can
      *                access the current theme, resources, etc.
      * @param attrs   The attributes of the XML tag that is inflating the view.
-     * @see #View(android.content.Context, android.util.AttributeSet, int)
+     * @see #ViewGroup(android.content.Context, android.util.AttributeSet, int)
      */
     public BarChart(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        TypedArray a = context.getTheme().obtainStyledAttributes(
+        /*TypedArray a = context.getTheme().obtainStyledAttributes(
                 attrs,
                 R.styleable.BarChart,
                 0, 0
@@ -82,7 +81,7 @@ public class BarChart extends BaseBarChart {
             // release the TypedArray so that it can be reused.
             a.recycle();
         }
-
+        */
         initializeGraph();
     }
 

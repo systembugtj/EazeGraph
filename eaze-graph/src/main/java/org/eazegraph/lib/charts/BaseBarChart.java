@@ -17,22 +17,18 @@
 
 package org.eazegraph.lib.charts;
 
+import android.animation.Animator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.widget.OverScroller;
 import android.widget.Scroller;
-
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.ValueAnimator;
 
 import org.eazegraph.lib.R;
 import org.eazegraph.lib.communication.IOnBarClickedListener;
@@ -272,13 +268,6 @@ public abstract class BaseBarChart extends BaseChart {
         mScroller = new Scroller(getContext());
 
         mRevealAnimator = ValueAnimator.ofFloat(0, 1);
-        mRevealAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                mRevealValue = (animation.getAnimatedFraction());
-                mGraph.invalidate();
-            }
-        });
         mRevealAnimator.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {

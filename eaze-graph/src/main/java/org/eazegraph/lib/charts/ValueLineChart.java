@@ -17,6 +17,8 @@
 
 package org.eazegraph.lib.charts;
 
+import android.animation.Animator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -32,9 +34,6 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.widget.Scroller;
-
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.ValueAnimator;
 
 import org.eazegraph.lib.R;
 import org.eazegraph.lib.communication.IOnPointFocusedListener;
@@ -1365,9 +1364,10 @@ public class ValueLineChart extends BaseChart {
                     mFocusedPoint = mSeries.get(0).getSeries().get(i);
                     break;
                 } else {
+                    int focusedPointOrder = 0;
                     // if first point bigger than touched x select first
                     if (i == 0 && pointX > _X) {
-                        mFocusedPoint = series.get(i);
+                        mFocusedPoint = mSeries.get(0).getSeries().get(i);
                         focusedPointOrder = i;
                         break;
                     } 

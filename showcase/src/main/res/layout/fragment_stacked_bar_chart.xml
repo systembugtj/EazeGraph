@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="de.eazegraph.app.fragments.StackedBarChartFragment">
+    tools:context="org.eazegraph.showcase.StackedBarChartFragment">
 
     <org.eazegraph.lib.charts.StackedBarChart
         android:id="@+id/stackedbarchart"

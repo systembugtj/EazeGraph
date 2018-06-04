@@ -17,6 +17,7 @@
 
 package org.eazegraph.lib.charts;
 
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -27,8 +28,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.nineoldandroids.animation.ValueAnimator;
 
 import org.eazegraph.lib.R;
 import org.eazegraph.lib.models.BaseModel;
@@ -76,7 +75,7 @@ public abstract class BaseChart extends ViewGroup {
      * @param context The Context the view is running in, through which it can
      *                access the current theme, resources, etc.
      * @param attrs   The attributes of the XML tag that is inflating the view.
-     * @see #View(android.content.Context, android.util.AttributeSet, int)
+     * @see #ViewGroup(Context, AttributeSet, int)
      */
     public BaseChart(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -604,7 +603,7 @@ public abstract class BaseChart extends ViewGroup {
 
     protected boolean           mShowDecimal;
 
-    protected ValueAnimator     mRevealAnimator     = null;
+    protected ValueAnimator mRevealAnimator     = null;
     protected float             mRevealValue        = 1.0f;
     protected int               mAnimationTime      = 1000;
     protected boolean           mStartedAnimation   = false;

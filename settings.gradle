@@ -1,2 +1,2 @@
-include ':EazeGraphLibrary', ':showcase'
+include ':eaze-graph', ':showcase'
 

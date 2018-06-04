@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:paddingTop="12dp"
     android:orientation="vertical"
-    tools:context="de.eazegraph.app.fragments.ValueLineChartFragment">
+    tools:context="org.eazegraph.showcase.ValueLineChartFragment">
 
     <org.eazegraph.lib.charts.ValueLineChart
         android:id="@+id/linechart"
